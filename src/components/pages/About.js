@@ -5,7 +5,7 @@ const About = () => {
     const msg = 'About';
 
     return (
-        <div className='container-fluid'>
+        <div className='container'>
             <Hero msg={msg} />
             About
         </div>

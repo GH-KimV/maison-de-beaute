@@ -5,7 +5,7 @@ const Services = () => {
     const msg = 'Services';
 
     return (
-        <div className='container-fluid'>
+        <div className='container'>
             <Hero msg={msg} />
             Services
         </div>

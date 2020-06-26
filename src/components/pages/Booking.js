@@ -5,7 +5,7 @@ const Booking = () => {
     const msg = 'Booking';
 
     return (
-        <div className='container-fluid'>
+        <div className='container'>
             <Hero msg={msg} />
             Book Now
         </div>

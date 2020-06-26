@@ -5,7 +5,7 @@ const Home = () => {
     const msg = 'Home';
 
     return (
-        <div className='container-fluid'>
+        <div className='container'>
             <Hero msg={msg} />
             Home
         </div>

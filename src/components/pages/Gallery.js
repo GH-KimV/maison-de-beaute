@@ -5,7 +5,7 @@ const Gallery = () => {
     const msg = 'Gallery';
 
     return (
-        <div className='container-fluid'>
+        <div className='container'>
             <Hero msg={msg} />
             Gallery
         </div>

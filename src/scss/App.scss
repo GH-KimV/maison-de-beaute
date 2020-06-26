@@ -11,3 +11,17 @@
 .hero{
   background-color: gray;
 }
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  .address{
+    position: relative;
+    float: left;
+  }
+  .copyright {
+    position: relative;
+    float: right;
+  }
+}

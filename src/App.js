@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/layout/Navbar';
+import Footer from './components/layout/Footer';
+
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Policies from './components/pages/Policies';
@@ -22,6 +24,7 @@ const App = () => {
                 <Route exact path='/book' component={Booking} />
                 <Route exact path='/gallery' component={Gallery} />
             </Switch>
+            <Footer />
         </Router>
     );
 };

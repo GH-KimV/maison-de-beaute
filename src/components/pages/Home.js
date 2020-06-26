@@ -17,6 +17,9 @@ const Home = () => {
                         condimentum nunc ac nisi vulputate fringilla. Donec
                         lacinia congue felis in faucibus.
                     </p>
+                    <button type='button' class='btn btn-secondary'>
+                        Learn More
+                    </button>
                 </div>
                 <img
                     className='align-self-center mr-3'
@@ -39,6 +42,9 @@ const Home = () => {
                         condimentum nunc ac nisi vulputate fringilla. Donec
                         lacinia congue felis in faucibus.
                     </p>
+                    <button type='button' class='btn btn-secondary'>
+                        Learn More
+                    </button>
                 </div>
             </div>
         </div>

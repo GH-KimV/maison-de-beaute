@@ -7,7 +7,8 @@ import Navbar from '../layout/Navbar';
 const Home = () => {
     const msg = 'Home';
     // const backGrndColor = `backgroundColor: #808080 !important;` ;
-
+    // test 
+    
     return (
         <div className='container-fluid'>
             <Navbar />

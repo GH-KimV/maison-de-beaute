@@ -1,11 +1,14 @@
 import React from 'react';
 import Hero from '../layout/Hero';
+import Navbar from '../layout/Navbar';
+
 
 const About = () => {
     const msg = 'About';
 
     return (
-        <div className='container'>
+        <div className='container-fluid'>
+            <Navbar />
             <Hero msg={msg} />
             <div className='media'>
                 <div className='media-body'>

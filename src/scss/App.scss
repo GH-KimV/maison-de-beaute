@@ -1,27 +1,32 @@
-@import "node_modules/bootstrap/scss/bootstrap";
+@import 'node_modules/bootstrap/scss/bootstrap';
 
 .container {
-  text-align: center;
+    text-align: center;
 }
 
 .container-fluid {
-  text-align: center;
+    text-align: center;
+    padding: 0;
 }
 
-.hero{
-  background-color: gray;
+.hero {
+    background-color: gray;
+    display: inline-block;
 }
 
+.background-img {
+    width: 55%;
+    float: right;
+    margin: 0;
+}
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  .address{
-    position: relative;
-    float: left;
-  }
-  .copyright {
-    position: relative;
-    float: right;
-  }
+    .address {
+        position: relative;
+        float: left;
+    }
+    .copyright {
+        position: relative;
+        float: right;
+    }
 }

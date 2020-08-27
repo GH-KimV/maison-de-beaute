@@ -1,0 +1,33 @@
+.about-company-container, .about-artist-container {
+    margin: 22rem auto;
+    display: flex;
+    justify-content: center;
+    
+    .content-container {
+        display: flex;
+        flex-direction: column;
+        h2 {
+            font-size: 4.5rem;
+            margin-bottom: 5rem;
+        }
+        p {
+            width: 38rem;
+            text-align: left;
+            margin-right: 0;
+            font-size: 1.5rem;
+        }
+    }
+}
+
+.about-company-container {
+    .content-container {
+        align-items: flex-end;
+    }
+}
+
+.about-artist-container {
+    flex-direction: row-reverse;
+    .content-container {
+        align-items: flex-start;
+    }
+}

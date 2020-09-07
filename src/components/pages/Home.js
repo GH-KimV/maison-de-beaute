@@ -6,13 +6,13 @@ import Navbar from '../layout/Navbar';
 
 const Home = () => {
     const msg = 'Home';
-    // const backGrndColor = `backgroundColor: #808080 !important;` ;
-    // test 
+    const selectClass = 'background-img';
+    const selectNavClass = 'navbar navbar-expand-lg navbar-light';
     
     return (
         <div className='container-fluid homepage'>
-            <Navbar />
-            <Hero msg={msg} bckGrnd={bckGrnd} />
+            <Navbar selectNavClass={selectNavClass} />
+            <Hero msg={msg} bckGrnd={bckGrnd} selectClass={selectClass} />
         </div>
     );
 };

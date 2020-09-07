@@ -18,25 +18,45 @@
     position: relative;
 }
 
-.navbar-wrapper {
+.services {
+    background: #414141;
+    position: relative;
+}
+
+.booking {
+    position: relative;
 }
 
 .navbar {
     background: rgba(255, 255, 255, 0.15);
-    color: #FFFFFF;
-    z-index:  1;
+    color: #ffffff;
+    z-index: 1;
     width: 100%;
     position: fixed;
 }
 
-.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-text {
-    color: #FFFFFF;
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-text {
+    color: #ffffff;
 }
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-text {
+    color: #000000;
+}
+
 
 .background-img {
     width: 55%;
     float: right;
     margin: 0;
+}
+
+.bckgrnd-alt {
+    width: 35%;
+    position: relative;
+    margin: 5rem 0 1rem 4rem;
+    border: 2rem solid rgba(177, 177, 177, 0.2);;
 }
 
 .hero-text {
@@ -48,7 +68,7 @@
     vertical-align: middle;
     position: absolute;
     bottom: 0;
-    left:0;
+    left: 0;
     top: 20rem;
     right: 10rem;
 }

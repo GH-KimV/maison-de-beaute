@@ -1,15 +1,13 @@
 import React from 'react';
-import Navbar  from '../layout/Navbar'
+import Navbar from '../layout/Navbar';
 
-const Hero = ({ msg, bckGrnd }) => {
+const Hero = ({ msg, bckGrnd, selectClass }) => {
     return (
         <div className='container-fluid hero'>
             <div class='hero-text'>
-                <span class='hero-msg'>
-                Hero {msg}
-                </span>
+                <span class='hero-msg'>{msg}</span>
             </div>
-            <img src={bckGrnd} alt='background' class='background-img' />
+            <img src={bckGrnd} alt='background' class={selectClass} />
         </div>
     );
 };

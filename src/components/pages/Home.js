@@ -10,7 +10,7 @@ const Home = () => {
     // test 
     
     return (
-        <div className='container-fluid'>
+        <div className='container-fluid homepage'>
             <Navbar />
             <Hero msg={msg} bckGrnd={bckGrnd} />
         </div>

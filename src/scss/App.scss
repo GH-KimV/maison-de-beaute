@@ -10,14 +10,47 @@
 }
 
 .hero {
-    background-color: gray;
-    display: inline-block;
+    display: flex;
+}
+
+.homepage {
+    background: #414141;
+    position: relative;
+}
+
+.navbar-wrapper {
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.15);
+    color: #FFFFFF;
+    z-index:  1;
+    width: 100%;
+    position: fixed;
+}
+
+.navbar-light .navbar-nav .nav-link, .navbar-light .navbar-text {
+    color: #FFFFFF;
 }
 
 .background-img {
     width: 55%;
     float: right;
     margin: 0;
+}
+
+.hero-text {
+    width: 45%;
+    position: relative;
+}
+
+.hero-text .hero-msg {
+    vertical-align: middle;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    top: 20rem;
+    right: 10rem;
 }
 
 .footer {

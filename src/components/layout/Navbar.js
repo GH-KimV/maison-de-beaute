@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-const Navbar = ({ backGrndColor }) => {
+const Navbar = ({ selectNavClass }) => {
     return (
-        <div className='container-fluid' style={backGrndColor} >
-            <nav class='navbar navbar-expand-lg navbar-light bg-light' >
+        <div className='container-fluid navbar-wrapper' >
+            <nav class={selectNavClass}>
                 {/* <a class='navbar-brand' href='/book'>
                     Book Now
                 </a> */}

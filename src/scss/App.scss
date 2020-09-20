@@ -73,16 +73,19 @@
 }
 
 .footer {
+    text-align: left;
+    margin-top: 5rem;
+
     .address {
         position: absolute;
-        padding: 2rem 0 2rem 15rem;
+        padding: 3rem 0 3rem 6rem;
         left: 0;
         font-family: 'Cormorant Garamond';
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
     .copyright {
         position: absolute;
-        padding: 2rem 15rem 2rem 0;
+        padding: 3rem 6rem 3rem 0;
         right: 0;
         font-family: 'Cormorant Garamond';
         font-size: 1rem;

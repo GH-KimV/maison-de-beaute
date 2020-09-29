@@ -21,7 +21,7 @@ const Footer = () => {
             </div>
             <div className='address'>
                 <a href='https://www.google.com/maps/place/Yolo+Studio/@34.1444454,-118.135074,17z/data=!4m13!1m7!3m6!1s0x80c2c35d0190a627:0x54ca0d29f0edb1cb!2s850+E+Green+St,+Pasadena,+CA+91101!3b1!8m2!3d34.144441!4d-118.1328853!3m4!1s0x80c2c3fde698ee5f:0x3a2976a91dbf1d62!8m2!3d34.144441!4d-118.1328853'>
-                    850 E Greem St, Pasadenam CA 91101
+                    850 E Green St, Pasadenam CA 91101
                 </a>
             </div>
             <div className='copyright'>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Hero from '../layout/Hero';
+import Home_hero from '../layout/Home_hero';
 import bckGrnd from '../../assets/HeroPageImage.png';
 import Navbar from '../layout/Navbar';
 import Logo from "../../assets/horizontal_logo_white.png"
@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <div className='container-fluid homepage'>
             <Navbar selectNavClass={selectNavClass} />
-            <Hero msg={msg} bckGrnd={bckGrnd} selectClass={selectClass} />
+            <Home_hero msg={msg} bckGrnd={bckGrnd} selectClass={selectClass} />
         </div>
     );
 };

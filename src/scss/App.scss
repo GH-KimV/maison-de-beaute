@@ -82,6 +82,10 @@
         left: 0;
         font-family: 'Cormorant Garamond';
         font-size: 1rem;
+        
+        a {
+            color: black;
+        }
     }
     .copyright {
         position: absolute;
@@ -99,6 +103,11 @@
         font-family: 'Playfair Display';
         font-size: 1.5rem;
         margin: 1rem 0 1rem 0;
+        
+        a {
+            color: black;
+            font-family: 'Cormorant Garamond';
+        }
     }
 
     .op-info {

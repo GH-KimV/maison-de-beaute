@@ -24,9 +24,9 @@ const Navbar = ({ selectNavClass }) => {
                 <div class='collapse navbar-collapse' id='navbarText'>
                     <ul class='navbar-nav mr-auto'>
                     <li class='nav-item'>
-                            <a class='nav-link' href='/book'>
+                            <Link class='nav-link' href='/book'>
                                 Book Now
-                            </a>
+                            </Link>
                         </li>
                         {/* <li class='nav-item active'>
                             <a class='nav-link' href='#'>
@@ -34,9 +34,9 @@ const Navbar = ({ selectNavClass }) => {
                             </a>
                         </li> */}
                         <li class='nav-item'>
-                            <a class='nav-link' href='/services'>
+                            <Link class='nav-link' href='/services'>
                                 Services
-                            </a>
+                            </Link>
                         </li>
                         <li class='nav-item'>
                             <a class='nav-link' href='/policies'>
@@ -44,12 +44,12 @@ const Navbar = ({ selectNavClass }) => {
                             </a>
                         </li>
                         <li class='nav-item'>
-                            <a class='nav-link' href='/about'>
+                            <Link class='nav-link' href='/about'>
                                 About
-                            </a>
+                            </Link>
                         </li>
                     </ul>
-                    <Link href="/">
+                    <Link to="/">
                         <img className="nav-logo" src={Logo}/>
                     </Link>
                 </div>

@@ -1,80 +1,88 @@
 import React from 'react';
 import Hero from '../layout/Hero';
 import Navbar from '../layout/Navbar';
-import bckGrnd from '../../assets/ServicesPageImage.png';
-
+import bckGrnd from '../../assets/Services-Banner.jpg';
+import '../../scss/Services.scss';
+//images
+import Manicure from "../../assets/manicure.jpg"
+import Pedicure from "../../assets/pedicure.jpg"
+import Eyebrows from "../../assets/eyebrows.jpg"
+import WeddingPlanning from "../../assets/wedding-planning.jpg"
 
 const Services = () => {
-    const msg = 'Select services';
+    const hero_title = <h1>Services</h1>;
+    const msg =
+        <p>
+            Our name translates to “house of beauty” in French. We want you to
+            experience that our salon is your second home for your beauty experience.
+            We provide nail services, semi-permanent makeup, and special occasion hair
+            and make-up services.
+        </p>;
     const selectClass = 'background-img';
     const selectNavClass = 'navbar navbar-expand-lg navbar-light';
 
+
     return (
-        <div className='container'>
-            <Hero msg={msg} />
-            <div className='media'>
-                <div className='media-body'>
-                    <h5 className='mt-0'>Service Name 1</h5>
-                    <p>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel
-                        metus scelerisque ante sollicitudin. Cras purus odio,
-                        vestibulum in vulputate at, tempus viverra turpis. Fusce
-                        condimentum nunc ac nisi vulputate fringilla. Donec
-                        lacinia congue felis in faucibus.
-                    </p>
-                    <button type='button' class='btn btn-secondary'>
-                        Learn More
-                    </button>
-                </div>
-                <img
-                    className='align-self-center mr-3'
-                    src='...'
-                    alt='Generic placeholder image'
-                />
-            </div>
-            <div class='media'>
-                <img
-                    class='align-self-center mr-3'
-                    src='...'
-                    alt='Generic placeholder image 2'
-                />
-                <div class='media-body'>
-                    <h5 class='mt-0'>Service Name 2</h5>
-                    <p>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel
-                        metus scelerisque ante sollicitudin. Cras purus odio,
-                        vestibulum in vulputate at, tempus viverra turpis. Fusce
-                        condimentum nunc ac nisi vulputate fringilla. Donec
-                        lacinia congue felis in faucibus.
-                    </p>
-                    <button type='button' class='btn btn-secondary'>
-                        Learn More
-                    </button>
-                </div>
-            </div>
-            <div className='media'>
-                <div className='media-body'>
-                    <h5 className='mt-0'>Service Name 3</h5>
-                    <p>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel
-                        metus scelerisque ante sollicitudin. Cras purus odio,
-                        vestibulum in vulputate at, tempus viverra turpis. Fusce
-                        condimentum nunc ac nisi vulputate fringilla. Donec
-                        lacinia congue felis in faucibus.
-                    </p>
-                    <button type='button' class='btn btn-secondary'>
-                        Learn More
-                    </button>
-                </div>
-                <img
-                    className='align-self-center mr-3'
-                    src='...'
-                    alt='Generic placeholder image 3'
-                />
-            </div>
         <div className='container-fluid services'>
-            <Navbar selectNavClass={selectNavClass }/>
-            <Hero msg={msg}  bckGrnd={bckGrnd} selectClass={selectClass}/>
+            <Navbar selectNavClass={selectNavClass} />
+            <Hero hero_title={hero_title} msg={msg} bckGrnd={bckGrnd} selectClass={selectClass} />
+            <a class='media'>
+
+                    <img
+                        class='align-self-center mr-3'
+                        src={Manicure}
+                        alt='Generic placeholder image 2'
+                    />
+                    <div class='media-body'>
+                        <h2>
+                            Manicure
+                        </h2>
+                    </div>
+                    <div className="button-line">
+                    </div>
+            </a>
+            <a className='media'>
+                    <div className='media-body'>
+                        <h2>
+                            Pedicure
+                        </h2>
+                    </div>
+                    <div className="button-line">
+                    </div>
+                    <img
+                        className='align-self-center mr-3'
+                        src={Pedicure}
+                        alt='Generic placeholder image 3'
+                    />
+            </a>
+            <a className='media'>
+                    <img
+                        className='align-self-center mr-3'
+                        src={Eyebrows}
+                        alt='Generic placeholder image 3'
+                    />
+                    <div className='media-body'>
+                        <h2>
+                            Eyebrows
+                        </h2>
+                    </div>
+                    <div className="button-line">
+                    </div>
+            </a>
+            <a class='media'>
+                    <div class='media-body'>
+                        <h2>
+                            Wedding Planning
+                        </h2>
+                    </div>
+                    <div className="button-line">
+                    </div>
+                    <img
+                        class='align-self-center mr-3'
+                        src={WeddingPlanning}
+                        alt='Generic placeholder image 2'
+                    />
+            </a>
         </div>
     );
 };

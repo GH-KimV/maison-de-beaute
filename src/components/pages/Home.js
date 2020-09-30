@@ -2,7 +2,6 @@ import React from 'react';
 import Home_hero from '../layout/Home_hero';
 import bckGrnd from '../../assets/HeroPageImage.png';
 import Navbar from '../layout/Navbar';
-import Logo from "../../assets/horizontal_logo_white.png"
 
 const Home = () => {
     const msg = 'Home';
@@ -13,6 +12,7 @@ const Home = () => {
         <div className='container-fluid homepage'>
             <Navbar selectNavClass={selectNavClass} />
             <Home_hero msg={msg} bckGrnd={bckGrnd} selectClass={selectClass} />
+
         </div>
     );
 };

@@ -1,5 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Logo from "../../assets/horizontal_logo_white.png"
 
 const Navbar = ({ selectNavClass }) => {
     return (
@@ -47,7 +49,9 @@ const Navbar = ({ selectNavClass }) => {
                             </a>
                         </li>
                     </ul>
-                    <span class='navbar-text'>MAISON de BEAUTÉ</span>
+                    <Link href="/">
+                        <img className="nav-logo" src={Logo}/>
+                    </Link>
                 </div>
             </nav>
         </div>

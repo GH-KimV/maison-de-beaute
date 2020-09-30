@@ -1,0 +1,184 @@
+@import "./defaults/default.scss";
+
+.services {
+    .media > .button-line {
+        transition: background 0.5s, transform 0.5s;
+    }
+    .media > .media-body {
+        transition: transform 0.5s;
+    }
+    .media {
+        padding: 3% 8%;
+        transition: background 1s, color 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 100%;
+            width: 100%;
+
+            img {
+                width: 32%;
+            }
+        .button-line {
+            width: 4%;
+            height: 1px;
+            background: black;
+            position: relative;
+        }
+        &:hover {
+            background: $background;
+            color: white;
+            .button-line {
+                background: white;
+                transform: translateX(50px);
+            }
+            .media-body {
+                transform: translateX(50px);
+            }
+        }
+    }
+
+    .media:nth-of-type(even) {
+        img {
+            margin-right: 0 !important;
+        }
+    }
+}
+
+@media screen and (min-width: 2050px) {
+    .media {
+        a {
+            h2 {
+                font-size: 3rem;
+            }
+        }
+    }
+    .media:nth-of-type(odd) {
+        .button-line {
+            right: 41.5%;
+            bottom: 23px;
+        }
+    }
+    .media:nth-of-type(even) {
+        .button-line {
+            left: -23%;
+            bottom: 23px;
+        }
+    }
+    .media:last-of-type {
+        margin-bottom: 15%;
+        .button-line {
+            left: -19%;
+        }
+    }
+}
+@media screen and (min-width: 1650px) and (max-width: 2050px) {
+    .media {
+        a {
+            h2 {
+                font-size: 2.75rem;
+            }
+        }
+    }
+    .media:nth-of-type(odd) {
+        .button-line {
+            right: 41.5%;
+            bottom: 23px;
+        }
+    }
+    .media:nth-of-type(even) {
+        .button-line {
+            left: -23%;
+            bottom: 23px;
+        }
+    }
+    .media:last-of-type {
+        margin-bottom: 15%;
+        .button-line {
+            left: -17%;
+            bottom: 23px;
+        }
+    }
+}
+@media screen and (min-width: 1420px) and (max-width: 1650px) {
+    .media {
+        a {
+            h2 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .media:nth-of-type(odd) {
+        .button-line {
+            right: 42.5%;
+            bottom: 23px;
+        }
+    }
+    .media:nth-of-type(even) {
+        .button-line {
+            left: -22%;
+            bottom: 23px;
+        }
+    }
+    .media:last-of-type {
+        margin-bottom: 15%;
+        .button-line {
+            left: -16.5%;
+        }
+    }
+}
+@media screen and (min-width: 1210px) and (max-width: 1420px) {
+    .media {
+        a {
+            h2 {
+                font-size: 2.25rem;
+            }
+        }
+    }
+    .media:nth-of-type(odd) {
+        .button-line {
+            right: 42.5%;
+            bottom: 23px;
+        }
+    }
+    .media:nth-of-type(even) {
+        .button-line {
+            left: -22%;
+            bottom: 23px;
+        }
+    }
+    .media:last-of-type {
+        margin-bottom: 15%;
+        .button-line {
+            left: -15.5%;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1210px) {
+    .media {
+        a {
+            h2 {
+                font-size: 2.25rem;
+            }
+        }
+    }
+    .media:nth-of-type(odd) {
+        .button-line {
+            right: 44.5%;
+            bottom: 23px;
+        }
+    }
+    .media:nth-of-type(even) {
+        .button-line {
+            left: -20%;
+            bottom: 23px;
+        }
+    }
+    .media:last-of-type {
+        margin-bottom: 15%;
+        .button-line {
+            left: -12%;
+        }
+    }
+}

@@ -1,51 +1,56 @@
-import React from 'react';
-import Hero from '../layout/Hero';
-import Navbar from '../layout/Navbar';
-
+import React from "react";
+import Hero from "../layout/Hero";
+import Navbar from "../layout/Navbar";
+import bckGrnd from "../../assets/HeroPageImage.png";
+import "../../scss/About.scss";
 
 const About = () => {
-    const msg = 'About';
-
-    return (
-        <div className='container-fluid'>
-            <Navbar />
-            <Hero msg={msg} />
-            <div className='media'>
-                <div className='media-body'>
-                    <h5 className='mt-0'>Japanese Nails</h5>
-                    <p>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel
-                        metus scelerisque ante sollicitudin. Cras purus odio,
-                        vestibulum in vulputate at, tempus viverra turpis. Fusce
-                        condimentum nunc ac nisi vulputate fringilla. Donec
-                        lacinia congue felis in faucibus.
-                    </p>
-                </div>
-                <img
-                    className='align-self-center mr-3'
-                    src='...'
-                    alt='Generic placeholder image'
-                />
-            </div>
-            <div class='media'>
-                <img
-                    class='align-self-center mr-3'
-                    src='...'
-                    alt='Generic placeholder image 2'
-                />
-                <div class='media-body'>
-                    <h5 class='mt-0'>Organic Nails</h5>
-                    <p>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel
-                        metus scelerisque ante sollicitudin. Cras purus odio,
-                        vestibulum in vulputate at, tempus viverra turpis. Fusce
-                        condimentum nunc ac nisi vulputate fringilla. Donec
-                        lacinia congue felis in faucibus.
-                    </p>
-                </div>
-            </div>
+  const hero_title = <h1>About Us</h1>;
+  const msg = (
+    <p>
+      Our name translates to “house of beauty” in French. We want you to
+      experience that our salon is your second home for your beauty experience.
+      We provide nail services, semi-permanent makeup, and special occasion hair
+      and make-up services.
+    </p>
+  );
+  const selectClass = 'background-img';
+  const selectNavClass = 'navbar navbar-expand-lg navbar-light';
+  
+  return (
+    <div className="container-fluid about">
+      <Navbar selectNavClass={selectNavClass} />
+      <Hero hero_title={hero_title} msg={msg} bckGrnd={bckGrnd} selectClass={selectClass}/>
+      <div className="bottom-content-wrapper">
+        <div className="row about-company-container">
+          <div className="col-sm content-container">
+            <h2>Company</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              explicabo quidem nesciunt beatae dolorem maiores similique nobis cum
+              cupiditate saepe! Dolorem adipisci inventore, doloribus explicabo
+              debitis iste placeat? Odio, labore.
+          </p>
+          </div>
+          <img src="..." className="col-sm img-fluid" alt="Responsive image" />
         </div>
-    );
+        <div>
+          <div className="row about-artist-container">
+            <div className="col-sm content-container">
+              <h2>Artists</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                explicabo quidem nesciunt beatae dolorem maiores similique nobis
+                cum cupiditate saepe! Dolorem adipisci inventore, doloribus
+                explicabo debitis iste placeat? Odio, labore.
+            </p>
+            </div>
+            <img src="..." className="col-sm img-fluid" alt="Responsive image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default About;

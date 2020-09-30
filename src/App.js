@@ -15,7 +15,7 @@ import './scss/App.scss';
 const App = () => {
     return (
         <Router>
-            <Navbar />
+            {/* <Navbar /> */}
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />

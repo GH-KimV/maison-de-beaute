@@ -1,27 +1,118 @@
-@import "node_modules/bootstrap/scss/bootstrap";
+@import 'node_modules/bootstrap/scss/bootstrap';
 
 .container {
-  text-align: center;
+    text-align: center;
 }
 
 .container-fluid {
-  text-align: center;
+    text-align: center;
+    padding: 0;
 }
 
-.hero{
-  background-color: gray;
+.hero {
+    display: flex;
 }
 
+.homepage {
+    background: #414141;
+    position: relative;
+}
+
+.services {
+    background: #414141;
+    position: relative;
+}
+
+.booking {
+    position: relative;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-text {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-text {
+    color: #000000;
+}
+
+.background-img {
+    width: 55%;
+    float: right;
+    margin: 0;
+}
+
+.bckgrnd-alt {
+    width: 35%;
+    position: relative;
+    margin: 5rem 0 1rem 4rem;
+    border: 2rem solid rgba(177, 177, 177, 0.2);
+}
+
+.hero-text {
+    width: 45%;
+    position: relative;
+}
+
+.hero-text .hero-msg {
+    vertical-align: middle;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 20rem;
+    right: 10rem;
+}
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  .address{
-    position: relative;
-    float: left;
-  }
-  .copyright {
-    position: relative;
-    float: right;
-  }
+    text-align: left;
+    margin-top: 5rem;
+
+    .address {
+        position: absolute;
+        padding: 3rem 0 3rem 6rem;
+        left: 0;
+        font-family: 'Cormorant Garamond';
+        font-size: 1rem;
+        
+        a {
+            color: black;
+        }
+    }
+    .copyright {
+        position: absolute;
+        padding: 3rem 6rem 3rem 0;
+        right: 0;
+        font-family: 'Cormorant Garamond';
+        font-size: 1rem;
+    }
+    .col-sm {
+        padding: 0;
+    }
+
+    .op-info-header {
+        color: #adadad;
+        font-family: 'Playfair Display';
+        font-size: 1.5rem;
+        margin: 1rem 0 1rem 0;
+        
+        a {
+            color: black;
+            font-family: 'Cormorant Garamond';
+        }
+    }
+
+    .op-info {
+        color: #000000;
+        font-family: 'Cormorant Garamond';
+        margin: 1rem 0 0 0;
+    }
 }

@@ -3,6 +3,7 @@ import Hero from '../layout/Hero';
 import Navbar from '../layout/Navbar';
 import bckGrnd from '../../assets/Services-Banner.jpg';
 import '../../scss/Services.scss';
+
 //images
 import Manicure from "../../assets/manicure.jpg"
 import Pedicure from "../../assets/pedicure.jpg"
@@ -21,9 +22,9 @@ const Services = () => {
     const selectClass = 'background-img';
     const selectNavClass = 'navbar navbar-expand-lg navbar-light';
 
-
     return (
-        <div className='container-fluid services'>
+
+        <div  className='container-fluid services'>
             <Navbar selectNavClass={selectNavClass} />
             <Hero hero_title={hero_title} msg={msg} bckGrnd={bckGrnd} selectClass={selectClass} />
             <a class='media'>

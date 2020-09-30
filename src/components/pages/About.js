@@ -16,7 +16,7 @@ const About = () => {
   );
   const selectClass = 'background-img';
   const selectNavClass = 'navbar navbar-expand-lg navbar-light';
-  
+
   return (
     <div className="container-fluid about">
       <Navbar selectNavClass={selectNavClass} />

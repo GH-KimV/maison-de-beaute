@@ -12,40 +12,39 @@
 
 //hero css
 .hero {
-    background-color: $background;
-    display: inline-block;
+    display: flex;
+}
+
+.homepage {
+    background: #414141;
     position: relative;
-   
-    .hero-content-container {
-        color: white;
-        height: inherit;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        h1, p {
-            text-align: left;
-        }
-        h1 {
-            font-size: 4.25em;
-            width: 10.5em;
-            margin-bottom: 2.7rem;
-        }
-        p {
-            font-size: 1.5em;
-            max-width: 30em;
-        }
-    }
-    .background-img {
-        max-height: 100vh;
-    }
-    .drop-down-line {
-        border-left: 1px solid white;
-        height: 27em;
-        position: absolute;
-        bottom: 0;
-        left: 30rem;
-    }
+}
+
+.services {
+    background: #414141;
+    position: relative;
+}
+
+.booking {
+    position: relative;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light .navbar-text {
+    color: #ffffff;
+}
+
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-text {
+    color: #000000;
 }
 
 .background-img {
@@ -53,14 +52,69 @@
     margin: 0;
 }
 
+.bckgrnd-alt {
+    width: 35%;
+    position: relative;
+    margin: 5rem 0 1rem 4rem;
+    border: 2rem solid rgba(177, 177, 177, 0.2);
+}
+
+.hero-text {
+    width: 45%;
+    position: relative;
+}
+
+.hero-text .hero-msg {
+    vertical-align: middle;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 20rem;
+    right: 10rem;
+}
+
 .footer {
+    text-align: left;
+    margin-top: 5rem;
+
     .address {
-        position: relative;
-        float: left;
+        position: absolute;
+        padding: 3rem 0 3rem 6rem;
+        left: 0;
+        font-family: 'Cormorant Garamond';
+        font-size: 1rem;
+        
+        a {
+            color: black;
+        }
     }
     .copyright {
-        position: relative;
-        float: right;
+        position: absolute;
+        padding: 3rem 6rem 3rem 0;
+        right: 0;
+        font-family: 'Cormorant Garamond';
+        font-size: 1rem;
+    }
+    .col-sm {
+        padding: 0;
+    }
+
+    .op-info-header {
+        color: #adadad;
+        font-family: 'Playfair Display';
+        font-size: 1.5rem;
+        margin: 1rem 0 1rem 0;
+        
+        a {
+            color: black;
+            font-family: 'Cormorant Garamond';
+        }
+    }
+
+    .op-info {
+        color: #000000;
+        font-family: 'Cormorant Garamond';
+        margin: 1rem 0 0 0;
     }
 }
 

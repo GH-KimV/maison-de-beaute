@@ -5,15 +5,14 @@ import Navbar from '../layout/Navbar';
 import Logo from "../../assets/horizontal_logo_white.png"
 
 const Home = () => {
-    const hero_title = <img src={Logo} />;
-    const msg = <p>“House of Beauty” in French.<br/>We are a beauty-dedicated space for modern and luxurious artistry.</p>;
-    // const backGrndColor = `backgroundColor: #808080 !important;` ;
-    // test 
+    const msg = 'Home';
+    const selectClass = 'background-img';
+    const selectNavClass = 'navbar navbar-expand-lg navbar-light';
     
     return (
-        <div className='container-fluid'>
-            <Navbar />
-            <Hero hero_title={hero_title} msg={msg} bckGrnd={bckGrnd} />
+        <div className='container-fluid homepage'>
+            <Navbar selectNavClass={selectNavClass} />
+            <Hero msg={msg} bckGrnd={bckGrnd} selectClass={selectClass} />
         </div>
     );
 };

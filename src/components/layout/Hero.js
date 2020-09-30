@@ -1,12 +1,13 @@
-import React from "react";
+import React from 'react';
+import Navbar from '../layout/Navbar';
 
-const Hero = ({ hero_title, msg, bckGrnd }) => {
-  return (
-    <div className=" container-fluid hero">
-      <div className="row">
-        <div className="col-sm hero-content-container">
-          {hero_title}
-          {msg}
+const Hero = ({ msg, bckGrnd, selectClass }) => {
+    return (
+        <div className='container-fluid hero'>
+            <div class='hero-text'>
+                <span class='hero-msg'>{msg}</span>
+            </div>
+            <img src={bckGrnd} alt='background' class={selectClass} />
         </div>
         <img className="col-sm" src={bckGrnd} alt="background" class="background-img" />
       </div>

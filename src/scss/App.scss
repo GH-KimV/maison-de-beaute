@@ -211,6 +211,7 @@
     border: 0.5px solid lightgrey;
     mix-blend-mode: difference;
 }
+.cursor--link-hovered-view-more:after {
     content: "View More";
     font-family: 'Cormorant Garamond', serif;
     color: lightgrey;

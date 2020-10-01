@@ -9,6 +9,7 @@ import Booking from './components/pages/Booking';
 import Gallery from './components/pages/Gallery';
 import './scss/App.scss';
 import Cursor from './components/layout/Cursor';
+import Manicure from './components/pages/Manicure';
 
 const App = () => {
 
@@ -89,6 +90,7 @@ const App = () => {
                 <Route exact path='/about' component={About} />
                 <Route exact path='/policies' component={Policies} />
                 <Route exact path='/services' component={Services} />
+                <Route exact path='/services/manicure' component={Manicure} />
                 <Route exact path='/book' component={Booking} />
                 <Route exact path='/gallery' component={Gallery} />
             </Switch>

@@ -7,10 +7,12 @@ const Cursor = () => {
     const [hidden, setHidden] = useState(false)
     const [clicked, setClicked] = useState(false)
     const [linkHovered, setLinkHovered] = useState(false)
+    const [linkHoveredViewMore, setLinkHoveredViewMore] = useState(false)
 
     useEffect(() => {
         addEventListeners();
         handleLinkHoverEvents();
+        handleLinkHoverEventsViewMore();
         return () => removeEventListeners();
     }, [])
 
@@ -32,6 +34,12 @@ const Cursor = () => {
         document.querySelectorAll("a").forEach(el => {
             el.addEventListener("mouseover", () => setLinkHovered(true));
             el.addEventListener("mouseout", () => setLinkHovered(false));
+        })
+    }
+    const handleLinkHoverEventsViewMore = () => {
+        document.querySelectorAll(".view_more").forEach(el => {
+            el.addEventListener("mouseover", () => setLinkHoveredViewMore(true));
+            el.addEventListener("mouseout", () => setLinkHoveredViewMore(false));
         })
     }
 
@@ -57,7 +65,8 @@ const Cursor = () => {
         {
             'cursor--clicked': clicked,
             'cursor--hidden': hidden,
-            'cursor--link-hovered': linkHovered
+            'cursor--link-hovered': linkHovered,
+            'cursor--link-hovered-view-more': linkHoveredViewMore
         }
     )
 

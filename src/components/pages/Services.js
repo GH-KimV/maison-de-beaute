@@ -27,8 +27,7 @@ const Services = () => {
         <div  className='container-fluid services'>
             <Navbar selectNavClass={selectNavClass} />
             <Hero hero_title={hero_title} msg={msg} bckGrnd={bckGrnd} selectClass={selectClass} />
-            <a class='media'>
-
+            <a class='media view_more'>
                     <img
                         class='align-self-center mr-3'
                         src={Manicure}
@@ -42,7 +41,7 @@ const Services = () => {
                     <div className="button-line">
                     </div>
             </a>
-            <a className='media'>
+            <a className='media view_more'>
                     <div className='media-body'>
                         <h2>
                             Pedicure
@@ -56,7 +55,7 @@ const Services = () => {
                         alt='Generic placeholder image 3'
                     />
             </a>
-            <a className='media'>
+            <a className='media view_more'>
                     <img
                         className='align-self-center mr-3'
                         src={Eyebrows}
@@ -70,7 +69,7 @@ const Services = () => {
                     <div className="button-line">
                     </div>
             </a>
-            <a class='media'>
+            <a class='media view_more'>
                     <div class='media-body'>
                         <h2>
                             Wedding Planning

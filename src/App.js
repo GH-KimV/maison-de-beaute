@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Footer from './components/layout/Footer';
 import Home from './components/pages/Home';
@@ -10,40 +10,42 @@ import Gallery from './components/pages/Gallery';
 import './scss/App.scss';
 import Cursor from './components/layout/Cursor';
 import Manicure from './components/pages/Manicure';
+import SelectedServices from './components/layout/SelectedServices';
+import Data from './components/data/servicesData.json';
 
 const App = () => {
 
     const init = () => {
         new SmoothScroll(document, 120, 12)
-    
+
         function SmoothScroll(target, speed, smooth) {
             if (target === document)
                 target = (document.scrollingElement
                     || document.documentElement
                     || document.body.parentNode
                     || document.body) // cross browser support for document scrolling
-    
+
             let moving = false
             let pos = target.scrollTop
             let frame = target === document.body
                 && document.documentElement
                 ? document.documentElement
                 : target // safari is the new IE
-    
+
             target.addEventListener('mousewheel', scrolled, { passive: false })
             target.addEventListener('DOMMouseScroll', scrolled, { passive: false })
-    
+
             function scrolled(e) {
                 e.preventDefault(); // disable default scrolling
-    
+
                 let delta = normalizeWheelDelta(e)
-    
+
                 pos += -delta * speed
                 pos = Math.max(0, Math.min(pos, target.scrollHeight - frame.clientHeight)) // limit scrolling
-    
+
                 if (!moving) update()
             }
-    
+
             function normalizeWheelDelta(e) {
                 if (e.detail) {
                     if (e.wheelDelta)
@@ -53,20 +55,20 @@ const App = () => {
                 } else
                     return e.wheelDelta / 120 // IE,Safari,Chrome
             }
-    
+
             function update() {
                 moving = true
-    
+
                 let delta = (pos - target.scrollTop) / smooth
-    
+
                 target.scrollTop += delta
-    
+
                 if (Math.abs(delta) > 0.5)
                     requestFrame(update)
                 else
                     moving = false
             }
-    
+
             let requestFrame = function () { // requestAnimationFrame cross browser
                 return (
                     window.requestAnimationFrame ||
@@ -82,6 +84,8 @@ const App = () => {
         }
     }
 
+    const [serviceKey, setServiceKey] = useState("");
+
     return (
         <Router>
             <Cursor />
@@ -89,8 +93,13 @@ const App = () => {
                 <Route exact path='/' component={Home} />
                 <Route exact path='/about' component={About} />
                 <Route exact path='/policies' component={Policies} />
-                <Route exact path='/services' component={Services} />
-                <Route exact path='/services/manicure' component={Manicure} />
+                <Route
+                    exact path='/services'
+                    component={() => <Services setServiceKey={setServiceKey} />}
+                />
+                <Route
+                    exact path='/services/SelectedServices'
+                    component={() => <SelectedServices serviceKey={serviceKey} />} />
                 <Route exact path='/book' component={Booking} />
                 <Route exact path='/gallery' component={Gallery} />
             </Switch>

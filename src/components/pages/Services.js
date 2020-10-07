@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../layout/Hero';
 import Navbar from '../layout/Navbar';
 import bckGrnd from '../../assets/Services-Banner.jpg';
@@ -10,7 +11,7 @@ import Pedicure from "../../assets/pedicure.jpg"
 import Eyebrows from "../../assets/eyebrows.jpg"
 import WeddingPlanning from "../../assets/wedding-planning.jpg"
 
-const Services = () => {
+const Services = ( {setServiceKey} ) => {
     const hero_title = <h1>Services</h1>;
     const msg =
         <p>
@@ -22,12 +23,13 @@ const Services = () => {
     const selectClass = 'background-img';
     const selectNavClass = 'navbar navbar-expand-lg navbar-light';
 
-    return (
+    
 
+    return (
         <div  className='container-fluid services'>
             <Navbar selectNavClass={selectNavClass} />
             <Hero hero_title={hero_title} msg={msg} bckGrnd={bckGrnd} selectClass={selectClass} />
-            <a class='media view_more'>
+            <Link onClick={setServiceKey("Manicure")} to="/services/SelectedServices" class='media view_more'>
                     <img
                         class='align-self-center mr-3'
                         src={Manicure}
@@ -38,10 +40,10 @@ const Services = () => {
                             Manicure
                         </h2>
                     </div>
-                    <div className="button-line">
+                    <div className="button-line">  
                     </div>
-            </a>
-            <a className='media view_more'>
+            </Link>
+            <Link onClick={setServiceKey("Pedicure")} to="/services/SelectedServices" className='media view_more'>
                     <div className='media-body'>
                         <h2>
                             Pedicure
@@ -54,8 +56,8 @@ const Services = () => {
                         src={Pedicure}
                         alt='Generic placeholder image 3'
                     />
-            </a>
-            <a className='media view_more'>
+            </Link>
+            <Link onClick={setServiceKey("Eyebrows")} to="/services/SelectedServices" className='media view_more'>
                     <img
                         className='align-self-center mr-3'
                         src={Eyebrows}
@@ -68,8 +70,8 @@ const Services = () => {
                     </div>
                     <div className="button-line">
                     </div>
-            </a>
-            <a class='media view_more'>
+            </Link>
+            <Link onClick={setServiceKey("Wedding Planning")} to="/services/SelectedServices" class='media view_more'>
                     <div class='media-body'>
                         <h2>
                             Wedding Planning
@@ -82,7 +84,7 @@ const Services = () => {
                         src={WeddingPlanning}
                         alt='Generic placeholder image 2'
                     />
-            </a>
+            </Link>
         </div>
     );
 };

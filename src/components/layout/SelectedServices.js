@@ -17,16 +17,22 @@ const SelectedServices = ({ serviceKey }) => {
         <div>
             <div>
                 <div className="right-row-container">
-                    {currentService.map(s => {
-                        return (
-                            <div>
-                                <h2>{s.serviceName}</h2>
-                                <p>{s.servicePrice} </p>
-                                <p>{s.serviceContent}</p>
-                                <img src={s.serviceLargeImage} />
-                            </div>
-                        )
-                    })}
+                    {
+                        serviceKey
+                            ?
+                            currentService.map(s => {
+                                return (
+                                    <div>
+                                        <h2>{s.serviceName}</h2>
+                                        <p>{s.servicePrice} </p>
+                                        <p>{s.serviceContent}</p>
+                                        <img src={s.serviceLargeImage} />
+                                    </div>
+                                )
+                            })
+                            :
+                            <p>Loading....</p>
+                    }
                 </div>
             </div>
         </div>

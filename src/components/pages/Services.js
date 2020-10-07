@@ -11,7 +11,7 @@ import Pedicure from "../../assets/pedicure.jpg"
 import Eyebrows from "../../assets/eyebrows.jpg"
 import WeddingPlanning from "../../assets/wedding-planning.jpg"
 
-const Services = ({ setServiceKey }) => {
+const Services = ({ setServiceKey, dynamicRoute, history }) => {
     const hero_title = <h1>Services</h1>;
     const msg =
         <p>
@@ -23,20 +23,18 @@ const Services = ({ setServiceKey }) => {
     const selectClass = 'background-img';
     const selectNavClass = 'navbar navbar-expand-lg navbar-light';
 
-    const clickHandler = (e, str) => {
-
-        if (!e) var e = window.event;
+    const clickHandler = async (e, str) => {
+        await setServiceKey(str)
+        if (!e) e = window.event;
         e.cancelBubble = true;
         if (e.stopPropagation) e.stopPropagation();
-
-        setServiceKey(str)
     }
 
     return (
         <div className='container-fluid services'>
             <Navbar selectNavClass={selectNavClass} />
             <Hero hero_title={hero_title} msg={msg} bckGrnd={bckGrnd} selectClass={selectClass} />
-            <Link onClick={(e) => clickHandler(e, "Manicure")} to="/services/SelectedServices" class='media view_more'>
+            <Link onMouseOver={(e) => clickHandler(e, "Manicure")} to={dynamicRoute} class='media view_more'>
                 <img
                     class='align-self-center mr-3'
                     src={Manicure}
@@ -45,12 +43,12 @@ const Services = ({ setServiceKey }) => {
                 <div class='media-body'>
                     <h2>
                         Manicure
-                        </h2>
+                    </h2>
                 </div>
                 <div className="button-line">
                 </div>
             </Link>
-            <Link onClick={(e) => clickHandler(e, "Pedicure")} to="/services/SelectedServices" className='media view_more'>
+            <Link onMouseOver={(e) => clickHandler(e, "Pedicure")} to={dynamicRoute} className='media view_more'>
                 <div className='media-body'>
                     <h2>
                         Pedicure
@@ -64,7 +62,7 @@ const Services = ({ setServiceKey }) => {
                     alt='Generic placeholder image 3'
                 />
             </Link>
-            <Link onClick={(e) => clickHandler(e, "Eyebrows")} to="/services/SelectedServices" className='media view_more'>
+            <Link onMouseOver={(e) => clickHandler(e, "Eyebrows")} to={dynamicRoute} className='media view_more'>
                 <img
                     className='align-self-center mr-3'
                     src={Eyebrows}
@@ -78,7 +76,7 @@ const Services = ({ setServiceKey }) => {
                 <div className="button-line">
                 </div>
             </Link>
-            <Link onClick={(e) => clickHandler(e, "Wedding Planning")} to="/services/SelectedServices" class='media view_more'>
+            <Link onMouseOver={(e) => clickHandler(e, "Wedding Planning")} to={dynamicRoute} class='media view_more'>
                 <div class='media-body'>
                     <h2>
                         Wedding Planning

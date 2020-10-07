@@ -5,8 +5,8 @@ const SelectedServices = ({ serviceKey }) => {
 
     let currentService;
 
-    for(let service in Data) {
-        if(service === serviceKey) {
+    for (let service in Data) {
+        if (service === serviceKey) {
             currentService = Data[service]
         }
     }
@@ -16,29 +16,19 @@ const SelectedServices = ({ serviceKey }) => {
     return (
         <div>
             <div>
-                {/* {Data.((key) => {
-                    console.log(Data[key])
-                    return (
-                        <div className="right-row-container">
-                            <h2>{Data[key].serviceName}</h2>
-                            <p>{data[key].servicePrice} </p>
-                            <p>{data[key].serviceContent}</p>
-                            <img src={data[key].serviceLargeImage} />
-                        </div>
-                    );
-                }
-                )} */}
+                <div className="right-row-container">
+                    {currentService.map(s => {
+                        return (
+                            <div>
+                                <h2>{s.serviceName}</h2>
+                                <p>{s.servicePrice} </p>
+                                <p>{s.serviceContent}</p>
+                                <img src={s.serviceLargeImage} />
+                            </div>
+                        )
+                    })}
+                </div>
             </div>
-            {/* <div>
-                {OtherData.map((key, value) => {
-                    return (
-                        <div value={value}>
-                            <h3>{key.serviceName}</h3>
-                            <p>{key.servicePrice}</p>
-                        </div>
-                    )
-                })}
-            </div> */}
         </div>
     )
 

@@ -16,23 +16,21 @@ import './scss/App.scss';
 
 const App = () => {
 
-    const [serviceKey, setServiceKey] = useState("");
+    let serviceKey;
 
     useEffect(() => {
         const localData = localStorage.getItem('serviceKey');
-        if (localData) setServiceKey(JSON.parse(localData));
+        if (localData) serviceKey = JSON.parse(localData);
     }, [])
 
     useEffect(() => {
-        localStorage.setItem('serviceKey', JSON.stringify(serviceKey))
+        localStorage.setItem('serviceKey', JSON.stringify(serviceKey));
     })
-
-    window.addEventListener('popstate', e => {
-        setServiceKey('');
-    });
 
     let dynamicRoute = `/services/`
     if (serviceKey) dynamicRoute += `${serviceKey.toLowerCase()}`;
+
+    let routeArray = ['manicure', 'pedicure', 'eyebrows', 'wedding planning']
 
     return (
         <Router>
@@ -43,10 +41,10 @@ const App = () => {
                 <Route exact path='/policies' component={Policies} />
                 <Route
                     exact path='/services'
-                    component={(props) => <Services setServiceKey={setServiceKey} dynamicRoute={dynamicRoute} history={props.history} {...props} />}
+                    component={() => <Services dynamicRoute={dynamicRoute} />}
                 />
                 <Route
-                    exact path={dynamicRoute}
+                    exact path={routeArray.forEach(r => dynamicRoute + r)}
                     component={() => <SelectedServices serviceKey={serviceKey} />}
                 />
                 <Route exact path='/book' component={Booking} />

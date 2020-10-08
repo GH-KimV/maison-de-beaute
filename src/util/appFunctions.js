@@ -64,12 +64,8 @@ function SmoothScroll(target, speed, smooth) {
 };
 
 const init = () => {
-    new SmoothScroll(document, 120, 12)
+    new SmoothScroll(document, 200, 100)
 };
-
-
-
-
 
 export {
     init

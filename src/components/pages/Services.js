@@ -10,8 +10,9 @@ import Manicure from "../../assets/manicure.jpg"
 import Pedicure from "../../assets/pedicure.jpg"
 import Eyebrows from "../../assets/eyebrows.jpg"
 import WeddingPlanning from "../../assets/wedding-planning.jpg"
+import { init } from '../../util/appFunctions';
 
-const Services = ({ setServiceKey, dynamicRoute, history }) => {
+const Services = ({ dynamicRoute, serviceKey }) => {
     const hero_title = <h1>Services</h1>;
     const msg =
         <p>
@@ -24,17 +25,19 @@ const Services = ({ setServiceKey, dynamicRoute, history }) => {
     const selectNavClass = 'navbar navbar-expand-lg navbar-light';
 
     const clickHandler = async (e, str) => {
-        await setServiceKey(str)
+        serviceKey = str;
         if (!e) e = window.event;
         e.cancelBubble = true;
         if (e.stopPropagation) e.stopPropagation();
+        localStorage.setItem('serviceKey', JSON.stringify(serviceKey));
+        console.log(serviceKey)
     }
 
     return (
         <div className='container-fluid services'>
             <Navbar selectNavClass={selectNavClass} />
             <Hero hero_title={hero_title} msg={msg} bckGrnd={bckGrnd} selectClass={selectClass} />
-            <Link onMouseOver={(e) => clickHandler(e, "Manicure")} to={dynamicRoute} class='media view_more'>
+            <Link onMouseOver={(e) => clickHandler(e, "Manicure")} to={dynamicRoute + 'manicure'} class='media view_more'>
                 <img
                     class='align-self-center mr-3'
                     src={Manicure}
@@ -42,17 +45,19 @@ const Services = ({ setServiceKey, dynamicRoute, history }) => {
                 />
                 <div class='media-body'>
                     <h2>
+                        {/* <button onMouseOver={(e) => clickHandler(e, 'Manicure')} class='media view_more'> */}
                         Manicure
+                        {/* </button> */}
                     </h2>
                 </div>
                 <div className="button-line">
                 </div>
             </Link>
-            <Link onMouseOver={(e) => clickHandler(e, "Pedicure")} to={dynamicRoute} className='media view_more'>
+            <Link onMouseOver={(e) => clickHandler(e, "Pedicure")} to={dynamicRoute + 'pedicure'} className='media view_more'>
                 <div className='media-body'>
-                    <h2>
-                        Pedicure
-                        </h2>
+                    {/* <button onMouseOver={(e) => clickHandler(e, 'Pedicure')} class='media view_more'> */}
+                    Pedicure
+                        {/* </button> */}
                 </div>
                 <div className="button-line">
                 </div>
@@ -62,25 +67,25 @@ const Services = ({ setServiceKey, dynamicRoute, history }) => {
                     alt='Generic placeholder image 3'
                 />
             </Link>
-            <Link onMouseOver={(e) => clickHandler(e, "Eyebrows")} to={dynamicRoute} className='media view_more'>
+            <Link onMouseOver={(e) => clickHandler(e, "Eyebrows")} to={dynamicRoute + 'eyebrows'} className='media view_more'>
                 <img
                     className='align-self-center mr-3'
                     src={Eyebrows}
                     alt='Generic placeholder image 3'
                 />
                 <div className='media-body'>
-                    <h2>
-                        Eyebrows
-                        </h2>
+                    {/* <button onMouseOver={(e) => clickHandler(e, 'Eyebrows')} class='media view_more'> */}
+                    Eyebrows
+                        {/* </button> */}
                 </div>
                 <div className="button-line">
                 </div>
             </Link>
-            <Link onMouseOver={(e) => clickHandler(e, "Wedding Planning")} to={dynamicRoute} class='media view_more'>
+            <Link onMouseOver={(e) => clickHandler(e, "Wedding Planning")} to={dynamicRoute + 'wedding planning'} class='media view_more'>
                 <div class='media-body'>
-                    <h2>
-                        Wedding Planning
-                        </h2>
+                    {/* <button onMouseEnter={(e) => clickHandler(e, 'Wedding Planning')} class='media view_more'> */}
+                    Wedding Planning
+                        {/* </button> */}
                 </div>
                 <div className="button-line">
                 </div>

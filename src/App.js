@@ -20,7 +20,7 @@ const App = () => {
 
     useEffect(() => {
         const localData = localStorage.getItem('serviceKey');
-        if (localData) serviceKey = JSON.parse(localData);
+        // if (localData) serviceKey = JSON.parse(localData);
     }, [])
 
     useEffect(() => {

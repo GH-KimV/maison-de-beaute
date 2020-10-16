@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { init } from './util/appFunctions';
+import { init } from './util/functions/appFunctions';
 
 import Footer from './components/layout/Footer';
 import Home from './components/pages/Home';
 import About from './components/pages/About';
-import Policies from './components/pages/Policies';
+import Policies from './components/pages/Policies/Policies';
 import Services from './components/pages/Services';
 import Booking from './components/pages/Booking';
 import Gallery from './components/pages/Gallery';

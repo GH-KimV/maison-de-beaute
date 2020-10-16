@@ -10,7 +10,6 @@ import Manicure from "../../assets/manicure.jpg"
 import Pedicure from "../../assets/pedicure.jpg"
 import Eyebrows from "../../assets/eyebrows.jpg"
 import WeddingPlanning from "../../assets/wedding-planning.jpg"
-import { init } from '../../util/appFunctions';
 
 const Services = ({ dynamicRoute, serviceKey }) => {
     const hero_title = <h1>Services</h1>;

@@ -1,5 +1,5 @@
 import React from 'react';
-import Data from "../data/servicesData.json";
+import Data from "../../util/data/servicesData.json";
 
 const SelectedServices = () => {
 

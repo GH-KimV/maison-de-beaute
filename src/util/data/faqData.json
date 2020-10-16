@@ -1,0 +1,86 @@
+{
+    "general": [
+        {
+            "question": "Do you take walk-ins?",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare consectetur enim malesuada tristique pellentesque. Quis quam tellus volutpat nibh at consectetur. Risus nibh ac facilisi id mauris. Leo, ipsum vitae in laoreet vel nulla. Velit maecenas consectetur eu posuere leo fermentum rhoncus non integer. Sit morbi."
+        },
+        {
+            "question": "What forms of payment do you accept?",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare consectetur enim malesuada tristique pellentesque. Quis quam tellus volutpat nibh at consectetur. Risus nibh ac facilisi id mauris. Leo, ipsum vitae in laoreet vel nulla. Velit maecenas consectetur eu posuere leo fermentum rhoncus non integer. Sit morbi."
+        },
+        {
+            "question": "Where are you located?",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare consectetur enim malesuada tristique pellentesque. Quis quam tellus volutpat nibh at consectetur. Risus nibh ac facilisi id mauris. Leo, ipsum vitae in laoreet vel nulla. Velit maecenas consectetur eu posuere leo fermentum rhoncus non integer. Sit morbi."
+        },
+        {
+            "question": "What are your store hours?",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare consectetur enim malesuada tristique pellentesque. Quis quam tellus volutpat nibh at consectetur. Risus nibh ac facilisi id mauris. Leo, ipsum vitae in laoreet vel nulla. Velit maecenas consectetur eu posuere leo fermentum rhoncus non integer. Sit morbi."
+        },
+        {
+            "question": "Is parking free?",
+            "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare consectetur enim malesuada tristique pellentesque. Quis quam tellus volutpat nibh at consectetur. Risus nibh ac facilisi id mauris. Leo, ipsum vitae in laoreet vel nulla. Velit maecenas consectetur eu posuere leo fermentum rhoncus non integer. Sit morbi."
+        }
+    ],
+    "nails": [
+        {
+            "question": "Can I make my nails extend and retract vibranium like Wolverine?",
+            "answer": "Abso-freaking-lutely"
+        },
+        {
+            "question": "Does Matt have the greatest fingernails known to the human race?",
+            "answer": "Can confirm. He's much better than Kim in every conceivable way"
+        },
+        {
+            "question": "",
+            "answer": ""
+        },
+        {
+            "question": "",
+            "answer": ""
+        },
+        {
+            "question": "",
+            "answer": ""
+        }
+    ],
+    "eyebrows": [
+        {
+            "question": "",
+            "answer": ""
+        },
+        {
+            "question": "",
+            "answer": ""
+        },
+        {
+            "question": "",
+            "answer": ""
+        },
+        {
+            "question": "",
+            "answer": ""
+        },
+        {
+            "question": "",
+            "answer": ""
+        }
+    ],
+    "wedding planning": [
+        {
+            "question": "",
+            "answer": ""
+        },
+        {
+            "question": "",
+            "answer": ""
+        },
+        {
+            "question": "",
+            "answer": ""
+        },
+        {
+            "question": "",
+            "answer": ""
+        }
+    ]
+}

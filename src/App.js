@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { init } from './util/functions/appFunctions';
 
@@ -19,7 +19,7 @@ const App = () => {
     let serviceKey;
 
     useEffect(() => {
-        const localData = localStorage.getItem('serviceKey');
+        // const localData = localStorage.getItem('serviceKey');
         // if (localData) serviceKey = JSON.parse(localData);
     }, [])
 

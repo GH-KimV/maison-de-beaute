@@ -1,42 +1,60 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import faqData from '../../../util/data/faqData.json';
 
 const FAQ = () => {
+    const [faqNav, setFaqNav] = useState('general'),
+        [clickedId, setClickedId] = useState(null),
+        curFaqSelected = faqData[faqNav]
 
-    const [faqNav, setFaqNav] = useState('general')
-    let curFaqSelected = faqData[faqNav]
+    useEffect(() => {
+        const localData = localStorage.getItem('faqNav');
+        if (localData) setFaqNav(JSON.parse(localData));
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem('faqNav', JSON.stringify(faqNav));
+    })
 
     const linkClickHandler = (e) => {
+        setClickedId(null);
         setFaqNav(e.target.innerText.toLowerCase())
     }
 
-    const revealAnswer = (question) => {
-        console.log(question.answer)
-    }
-
+    const revealAnswer = (idx) => {
+        if (clickedId || clickedId === 0) {
+            setClickedId(null);
+        } else {
+            setClickedId(idx);
+        }
+    };
 
     return (
         <div>
             <div className="faqNav">
-                <Link onClick={(e) => linkClickHandler(e)}>
+                <h5 onClick={(e) => linkClickHandler(e)}>
                     General
-                </Link>
-                <Link onClick={(e) => linkClickHandler(e)}>
+                </h5>
+                <h5 onClick={(e) => linkClickHandler(e)}>
                     Nails
-                </Link>
-                <Link onClick={(e) => linkClickHandler(e)}>
+                </h5>
+                <h5 onClick={(e) => linkClickHandler(e)}>
                     Eyebrows
-                </Link>
-                <Link onClick={(e) => linkClickHandler(e)}>
+                </h5>
+                <h5 onClick={(e) => linkClickHandler(e)}>
                     Wedding Planning
-                </Link>
+                </h5>
             </div>
             <div className="faqSwitch">
                 <ul>
                     {
-                        curFaqSelected.map(q => (
-                            <li onClick={revealAnswer(q)}>{q.question}</li>
+                        curFaqSelected.map((q, idx) => (
+                            <div>
+                                <li onClick={() => revealAnswer(idx)}>Question: {q.question}</li>
+                                {
+                                    clickedId == idx &&
+                                    <li>Answer: {q.answer}</li>
+                                }
+                            </div>
                         ))
                     }
                 </ul>

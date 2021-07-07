@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero from '../layout/Hero';
 import Navbar from '../layout/Navbar';
 import bckGrnd from '../../assets/Services-Banner.jpg';
@@ -9,8 +10,9 @@ import Manicure from "../../assets/manicure.jpg"
 import Pedicure from "../../assets/pedicure.jpg"
 import Eyebrows from "../../assets/eyebrows.jpg"
 import WeddingPlanning from "../../assets/wedding-planning.jpg"
+import { init } from '../../util/appFunctions';
 
-const Services = () => {
+const Services = ({ dynamicRoute, serviceKey }) => {
     const hero_title = <h1>Services</h1>;
     const msg =
         <p>
@@ -22,67 +24,77 @@ const Services = () => {
     const selectClass = 'background-img';
     const selectNavClass = 'navbar navbar-expand-lg navbar-light';
 
-    return (
+    const clickHandler = async (e, str) => {
+        serviceKey = str;
+        if (!e) e = window.event;
+        e.cancelBubble = true;
+        if (e.stopPropagation) e.stopPropagation();
+        localStorage.setItem('serviceKey', JSON.stringify(serviceKey));
+        console.log(serviceKey)
+    }
 
-        <div  className='container-fluid services'>
+    return (
+        <div className='container-fluid services'>
             <Navbar selectNavClass={selectNavClass} />
             <Hero hero_title={hero_title} msg={msg} bckGrnd={bckGrnd} selectClass={selectClass} />
-            <a class='media view_more'>
-                    <img
-                        class='align-self-center mr-3'
-                        src={Manicure}
-                        alt='Generic placeholder image 2'
-                    />
-                    <div class='media-body'>
-                        <h2>
-                            Manicure
-                        </h2>
-                    </div>
-                    <div className="button-line">
-                    </div>
-            </a>
-            <a className='media view_more'>
-                    <div className='media-body'>
-                        <h2>
-                            Pedicure
-                        </h2>
-                    </div>
-                    <div className="button-line">
-                    </div>
-                    <img
-                        className='align-self-center mr-3'
-                        src={Pedicure}
-                        alt='Generic placeholder image 3'
-                    />
-            </a>
-            <a className='media view_more'>
-                    <img
-                        className='align-self-center mr-3'
-                        src={Eyebrows}
-                        alt='Generic placeholder image 3'
-                    />
-                    <div className='media-body'>
-                        <h2>
-                            Eyebrows
-                        </h2>
-                    </div>
-                    <div className="button-line">
-                    </div>
-            </a>
-            <a class='media view_more'>
-                    <div class='media-body'>
-                        <h2>
-                            Wedding Planning
-                        </h2>
-                    </div>
-                    <div className="button-line">
-                    </div>
-                    <img
-                        class='align-self-center mr-3'
-                        src={WeddingPlanning}
-                        alt='Generic placeholder image 2'
-                    />
-            </a>
+            <Link onMouseOver={(e) => clickHandler(e, "Manicure")} to={dynamicRoute + 'manicure'} class='media view_more'>
+                <img
+                    class='align-self-center mr-3'
+                    src={Manicure}
+                    alt='Generic placeholder image 2'
+                />
+                <div class='media-body'>
+                    <h2>
+                        {/* <button onMouseOver={(e) => clickHandler(e, 'Manicure')} class='media view_more'> */}
+                        Manicure
+                        {/* </button> */}
+                    </h2>
+                </div>
+                <div className="button-line">
+                </div>
+            </Link>
+            <Link onMouseOver={(e) => clickHandler(e, "Pedicure")} to={dynamicRoute + 'pedicure'} className='media view_more'>
+                <div className='media-body'>
+                    {/* <button onMouseOver={(e) => clickHandler(e, 'Pedicure')} class='media view_more'> */}
+                    Pedicure
+                        {/* </button> */}
+                </div>
+                <div className="button-line">
+                </div>
+                <img
+                    className='align-self-center mr-3'
+                    src={Pedicure}
+                    alt='Generic placeholder image 3'
+                />
+            </Link>
+            <Link onMouseOver={(e) => clickHandler(e, "Eyebrows")} to={dynamicRoute + 'eyebrows'} className='media view_more'>
+                <img
+                    className='align-self-center mr-3'
+                    src={Eyebrows}
+                    alt='Generic placeholder image 3'
+                />
+                <div className='media-body'>
+                    {/* <button onMouseOver={(e) => clickHandler(e, 'Eyebrows')} class='media view_more'> */}
+                    Eyebrows
+                        {/* </button> */}
+                </div>
+                <div className="button-line">
+                </div>
+            </Link>
+            <Link onMouseOver={(e) => clickHandler(e, "Wedding Planning")} to={dynamicRoute + 'wedding planning'} class='media view_more'>
+                <div class='media-body'>
+                    {/* <button onMouseEnter={(e) => clickHandler(e, 'Wedding Planning')} class='media view_more'> */}
+                    Wedding Planning
+                        {/* </button> */}
+                </div>
+                <div className="button-line">
+                </div>
+                <img
+                    class='align-self-center mr-3'
+                    src={WeddingPlanning}
+                    alt='Generic placeholder image 2'
+                />
+            </Link>
         </div>
     );
 };
